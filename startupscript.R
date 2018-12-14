@@ -1,6 +1,7 @@
 if (!require("pacman")) install.packages("pacman")
 pacman::p_load(
   data.table,
+  devtools,
   caret,
   rJava,
   RJDBC,
@@ -16,6 +17,9 @@ pacman::p_load(
   doParallel,
   dplyr
 )
+
+install_github('CarrotHealth/carrothealth_r_package')
+library(carrothealth)
 
 options(scipen=999)
 

@@ -15,10 +15,14 @@ pacman::p_load(
   stringr,
   foreach,
   doParallel,
-  dplyr
+  dplyr,
+  dbplyr,
+  futile.logger
 )
 
-install_github('CarrotHealth/carrothealth_r_package')
+devtools::install_github("zacharyrsmith/RSnowflake")
+devtools::install_github('carrothealth/carrothealth_r_package')
+ #                        , ref = '79a48df005f6a4a993415c48e86f1c54b568cf61')
 library(carrothealth)
 
 options(scipen=999)
@@ -39,3 +43,5 @@ stall <- function(){
     exp(log(qqq))/qqq
   }
 }
+
+
